@@ -3,19 +3,12 @@ def num_system_converter(string: str, system_from=2, system_to=None):
         if {'2', '3', '4', '5', '6', '7', '8', '9'}.intersection(string):
             raise Exception('invalid string')
         char_digit = {
-            10: 'A',
-            11: 'B',
-            12: 'C',
-            13: 'D',
-            14: 'E',
-            15: 'F',
+            10: 'A', 11: 'B', 12: 'C',
+            13: 'D', 14: 'E', 15: 'F',
         }
         system_map = {
-            16: 4,
-            8: 3,
-            4: 2,
-            10: 1,
-            2: 1
+            16: 4, 8: 3, 4: 2,
+            10: 1, 2: 1
         }
         if system_to not in system_map:
             raise Exception('invalid system')
@@ -77,12 +70,8 @@ def num_system_converter(string: str, system_from=2, system_to=None):
     def to_binary(string, system_from):
         result = ''
         char_digit = {
-            'A': 10,
-            'B': 11,
-            'C': 12,
-            'D': 13,
-            'E': 14,
-            'F': 15,
+            'A': 10, 'B': 11, 'C': 12,
+            'D': 13, 'E': 14, 'F': 15,
         }
         if system_from != 10:
             string = string[::-1]
