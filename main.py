@@ -27,9 +27,9 @@ def num_system_converter(string: str, system_from=2, system_to=None):
                 [
                     i[0]
                     for i in filter(
-                    lambda x: x[1] != '0',
-                    zip(nums[:len(string)], string)
-                )
+                        lambda x: x[1] != '0',
+                        zip(nums[:len(string)], string)
+                    )
                 ]
             )
             )
@@ -44,9 +44,9 @@ def num_system_converter(string: str, system_from=2, system_to=None):
                 [
                     int(i[0])
                     for i in filter(
-                    lambda x: x[1] != '0',
-                    zip(nums[len(nums) - len(slice):], slice)
-                )
+                        lambda x: x[1] != '0',
+                        zip(nums[len(nums) - len(slice):], slice)
+                    )
                 ]
             )
             if sum_res in char_digit:
@@ -56,9 +56,9 @@ def num_system_converter(string: str, system_from=2, system_to=None):
             [
                 int(i[0])
                 for i in filter(
-                lambda x: x[1] != '0',
-                zip(nums[:len(string) - (i * el)], string[i * el:])
-            )
+                    lambda x: x[1] != '0',
+                    zip(nums[:len(string) - (i * el)], string[i * el:])
+                )
             ]
         )
         if sum_res != 0:
